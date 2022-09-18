@@ -8,7 +8,7 @@ export default function MemoListScreens() {
 		<View style={styles.container}>
 			<AppBer />
 			<MemoList />
-			<CircleBotton>+</CircleBotton>
+			<CircleBotton name='plus'></CircleBotton>
 		</View>
 	);
 }

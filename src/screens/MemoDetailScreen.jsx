@@ -15,7 +15,7 @@ export default function MemoDetailScreen() {
 					買い物リスト 書体やレイアウトなどを確認するために、
 				</Text>
 			</ScrollView>
-			<CircleBotton style={{ top: 160, bottom: 'aute' }}>+</CircleBotton>
+			<CircleBotton name='edit' style={{ top: 160, bottom: 'aute' }} />
 		</View>
 	);
 }

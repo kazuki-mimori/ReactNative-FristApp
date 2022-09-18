@@ -1,17 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { string, shape } from 'prop-types';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function CircleBotton(props) {
-	const { children, style } = props;
+	const { style, name } = props;
 	return (
 		<View style={[styles.circleButtom, style]}>
-			<Text style={styles.circleButtomLabel}>{children}</Text>
+			<AntDesign name={name} size={32} color='white' />
 		</View>
 	);
 }
 CircleBotton.propTypes = {
 	children: string.isRequired,
 	style: shape(),
+	name: string.isRequired,
 };
 
 CircleBotton.defaultProps = {
