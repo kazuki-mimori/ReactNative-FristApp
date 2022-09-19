@@ -1,23 +1,25 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { string, shape } from 'prop-types';
 import { AntDesign } from '@expo/vector-icons';
 
 export default function CircleBotton(props) {
-	const { style, name } = props;
+	const { style, name, onPress } = props;
 	return (
-		<View style={[styles.circleButtom, style]}>
+		<TouchableOpacity style={[styles.circleButtom, style]} onPress={onPress}>
 			<AntDesign name={name} size={32} color='white' />
-		</View>
+		</TouchableOpacity>
 	);
 }
 CircleBotton.propTypes = {
 	children: string.isRequired,
 	style: shape(),
 	name: string.isRequired,
+	onPress: shape().isRequired,
 };
 
 CircleBotton.defaultProps = {
 	style: null,
+	onPress: null,
 };
 
 const styles = StyleSheet.create({

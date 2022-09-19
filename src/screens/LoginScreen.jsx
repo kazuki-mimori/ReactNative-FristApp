@@ -1,4 +1,10 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	TextInput,
+	TouchableOpacity,
+	View,
+} from 'react-native';
 import AppBer from '../components/AppBer';
 import SubmitButton from '../components/SubmitButton';
 
@@ -13,7 +19,9 @@ export default function LoginScreen() {
 				<SubmitButton label='Submit' />
 				<View style={styles.footer}>
 					<Text style={styles.footerText}>Not registered</Text>
-					<Text style={styles.footerLink}>sign up here!</Text>
+					<TouchableOpacity>
+						<Text style={styles.footerLink}>sign up here!</Text>
+					</TouchableOpacity>
 				</View>
 			</View>
 		</View>

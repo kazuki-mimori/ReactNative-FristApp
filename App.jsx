@@ -3,8 +3,8 @@
 // import MemoEditScreen from './src/screens/MemoEditScreen';
 // import LogoutScreen from './src/screens/LogoutScreen';
 // import MemoCreateScreen from './src/screens/MemoCreateScreen';
-// import LoginScreen from './src/screens/LoginScreen';
-import LogoutScreen from './src/screens/LogoutScreen';
+import LoginScreen from './src/screens/LoginScreen';
+// import LogoutScreen from './src/screens/LogoutScreen';
 
 export default function App() {
 	return (
@@ -14,8 +14,8 @@ export default function App() {
 			{/* <MemoEditScreen /> */}
 			{/* <MemoCreateScreen /> */}
 			{/* <LogoutScreen /> */}
-			{/* <LoginScreen /> */}
-			<LogoutScreen />
+			<LoginScreen />
+			{/* <LogoutScreen /> */}
 		</>
 	);
 }

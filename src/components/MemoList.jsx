@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export default function MemoList() {
@@ -9,27 +9,27 @@ export default function MemoList() {
 					<Text style={styles.memoListItemTitle}>買い物リスト</Text>
 					<Text style={styles.memoListItemRight}>2020年12月24日 10:00</Text>
 				</View>
-				<View>
+				<TouchableOpacity>
 					<Feather name='x' size={16} color='#B0B0B0' />
-				</View>
+				</TouchableOpacity>
 			</View>
 			<View style={styles.memoListItem}>
 				<View>
 					<Text style={styles.memoListItemTitle}>買い物リスト</Text>
 					<Text style={styles.memoListItemRight}>2020年12月24日 10:00</Text>
 				</View>
-				<View>
+				<TouchableOpacity>
 					<Feather name='x' size={16} color='#B0B0B0' />
-				</View>
+				</TouchableOpacity>
 			</View>
 			<View style={styles.memoListItem}>
 				<View>
 					<Text style={styles.memoListItemTitle}>買い物リスト</Text>
 					<Text style={styles.memoListItemRight}>2020年12月24日 10:00</Text>
 				</View>
-				<View>
+				<TouchableOpacity>
 					<Feather name='x' size={16} color='#B0B0B0' />
-				</View>
+				</TouchableOpacity>
 			</View>
 		</View>
 	);
