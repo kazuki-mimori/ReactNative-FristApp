@@ -1,11 +1,9 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import AppBer from '../components/AppBer';
 import CircleBotton from '../components/CircleBotton';
 
-export default function MemoDetailScreen() {
+export default function MemoDetailScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
-			<AppBer />
 			<View style={styles.MemoHeader}>
 				<Text style={styles.MemoTitle}>買い物リスト物</Text>
 				<Text style={styles.MemoDate}>2020年12月24日 10:00</Text>
@@ -15,7 +13,11 @@ export default function MemoDetailScreen() {
 					買い物リスト 書体やレイアウトなどを確認するために、
 				</Text>
 			</ScrollView>
-			<CircleBotton name='edit' style={{ top: 160, bottom: 'aute' }} />
+			<CircleBotton
+				onPress={() => navigation.navigate('Edit')}
+				name='edit'
+				style={{ top: 60, bottom: 'aute' }}
+			/>
 		</View>
 	);
 }

@@ -5,21 +5,34 @@ import {
 	TouchableOpacity,
 	View,
 } from 'react-native';
-import AppBer from '../components/AppBer';
 import SubmitButton from '../components/SubmitButton';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
-			<AppBer />
 			<View style={styles.inner}>
 				<Text style={styles.title}>Login</Text>
 				<TextInput value='Email Address' style={styles.input} />
 				<TextInput value='Password' style={styles.input} />
-				<SubmitButton label='Submit' />
+				<SubmitButton
+					label='Submit'
+					onPress={() =>
+						navigation.reset({
+							index: 0,
+							routes: [{ name: 'Home' }],
+						})
+					}
+				/>
 				<View style={styles.footer}>
 					<Text style={styles.footerText}>Not registered</Text>
-					<TouchableOpacity>
+					<TouchableOpacity
+						onPress={() => {
+							navigation.reset({
+								index: 0,
+								routes: [{ name: 'Logout' }],
+							});
+						}}
+					>
 						<Text style={styles.footerLink}>sign up here!</Text>
 					</TouchableOpacity>
 				</View>

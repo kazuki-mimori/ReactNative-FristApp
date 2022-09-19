@@ -4,17 +4,19 @@ import {
 	View,
 	KeyboardAvoidingView,
 } from 'react-native';
-import AppBer from '../components/AppBer';
 import CircleBotton from '../components/CircleBotton';
 
-export default function MemoCreateScreen() {
+export default function MemoCreateScreen({ navigation }) {
 	return (
 		<KeyboardAvoidingView style={styles.container} behavior='height'>
-			<AppBer />
 			<View style={styles.inputContainer}>
 				<TextInput value='' multiline style={styles.input} />
 			</View>
-			<CircleBotton name='check' style={{ bottom: 30 }} />
+			<CircleBotton
+				onPress={() => navigation.goBack()}
+				name='check'
+				style={{ bottom: 30 }}
+			/>
 		</KeyboardAvoidingView>
 	);
 }
