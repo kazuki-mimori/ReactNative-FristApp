@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import {
 	createNativeStackNavigator,
-	CardStyleInterpolators,
+	// CardStyleInterpolators,
 } from '@react-navigation/native-stack';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
 import MemoListScreens from './src/screens/MemoListScreens';

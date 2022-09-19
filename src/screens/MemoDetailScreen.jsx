@@ -16,7 +16,7 @@ export default function MemoDetailScreen({ navigation }) {
 			<CircleBotton
 				onPress={() => navigation.navigate('Edit')}
 				name='edit'
-				style={{ top: 60, bottom: 'aute' }}
+				style={{ top: 60 }}
 			/>
 		</View>
 	);
