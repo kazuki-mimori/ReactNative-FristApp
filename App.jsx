@@ -18,13 +18,12 @@ const Stack = createNativeStackNavigator();
 if (firebase.apps.length === 0) {
 	firebase.initializeApp(firebaseConfig);
 }
-
 export default function App() {
 	return (
 		<>
 			<NavigationContainer>
 				<Stack.Navigator
-					initialRouteName='logout'
+					initialRouteName='Login'
 					screenOptions={{
 						headerStyle: { backgroundColor: '#467FD3' },
 						headerTitleStyle: { color: '#fff' },

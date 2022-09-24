@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
 	Alert,
 	StyleSheet,
@@ -13,6 +13,18 @@ import firebase from 'firebase';
 export default function LoginScreen({ navigation }) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+
+	useEffect(() => {
+		const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+			if (user) {
+				navigation.reset({
+					index: 0,
+					routes: [{ name: 'Home' }],
+				});
+			}
+		});
+		return unsubscribe;
+	} ,[]);
 
 	const handlePress = () => {
 		firebase.auth().signInWithEmailAndPassword(email, password)
