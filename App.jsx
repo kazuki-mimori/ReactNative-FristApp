@@ -13,6 +13,8 @@ import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import {firebaseConfig} from './env';
 
+require('firebase/firestore');
+
 const Stack = createNativeStackNavigator();
 
 if (firebase.apps.length === 0) {

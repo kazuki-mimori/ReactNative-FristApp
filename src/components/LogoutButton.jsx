@@ -4,8 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export default function LogoutButton() {
-const handlePress = () => {
     const navigation = useNavigation();
+    const handlePress = () => {
     firebase.auth().signOut()
     .then(() => {
         navigation.reset({
