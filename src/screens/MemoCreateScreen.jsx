@@ -15,7 +15,7 @@ export default function MemoCreateScreen({ navigation }) {
 			bodyText: 'Hello',
 		})
 		.then((docRef) => {
-			console.log('Created!', docRef.data());
+			console.log('Created!', docRef.id);
 			navigation.goBack();
 		})
 		.catch((error) => {
