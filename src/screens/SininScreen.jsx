@@ -10,7 +10,7 @@ import {
 import SubmitButton from '../components/SubmitButton';
 import firebase from 'firebase';
 
-export default function LogoutScreen({ navigation }) {
+export default function SininScreen({ navigation }) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -33,7 +33,7 @@ export default function LogoutScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.inner}>
-				<Text style={styles.title}>Logout</Text>
+				<Text style={styles.title}>Sinin</Text>
 				<TextInput
 					style={styles.input}
 					value={email}
