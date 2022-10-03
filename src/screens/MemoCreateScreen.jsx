@@ -17,7 +17,7 @@ export default function MemoCreateScreen({ navigation }) {
 		ref
 			.add({
 				bodyText,
-				updatedAt: new Date(),
+				updateedAt: new Date(),
 			})
 			.then((docRef) => {
 				console.log('Created!', docRef.id);
