@@ -11,15 +11,16 @@ import MemoEditScreen from './src/screens/MemoEditScreen';
 import LogoutScreen from './src/screens/SininScreen';
 import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import SininScreen from './src/screens/LoginScreen';
-import {firebaseConfig} from './env';
+import { firebaseConfig } from './env';
 
 require('firebase/firestore');
-
-const Stack = createNativeStackNavigator();
 
 if (firebase.apps.length === 0) {
 	firebase.initializeApp(firebaseConfig);
 }
+
+const Stack = createNativeStackNavigator();
+
 export default function App() {
 	return (
 		<>
