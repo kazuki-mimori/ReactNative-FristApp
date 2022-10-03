@@ -8,6 +8,7 @@ import {
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { shape, string, instanceOf, arrayOf } from 'prop-types';
+import { dateToString } from '../utils';
 
 export default function MemoList(props) {
 	const { memos } = props;
@@ -16,7 +17,7 @@ export default function MemoList(props) {
 		return (
 			<TouchableOpacity
 				onPress={() => {
-					navigation.navigate('Detail');
+					navigation.navigate('Detail', { id: item.id });
 				}}
 				style={styles.memoListItem}
 				key={item.id}
@@ -25,7 +26,9 @@ export default function MemoList(props) {
 					<Text style={styles.memoListItemTitle} numberOfLines={1}>
 						{item.bodyText}
 					</Text>
-					<Text style={styles.memoListItemRight}>{String(item.updatedAt)}</Text>
+					<Text style={styles.memoListItemRight}>
+						{dateToString(item.updatedAt)}
+					</Text>
 				</View>
 				<TouchableOpacity
 					style={styles.memoDelete}
