@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import CircleBotton from '../components/CircleBotton';
-import { shape } from 'prop-types';
+import { shape, string } from 'prop-types';
 import { useEffect, useState } from 'react';
 import firebase from 'firebase';
 import { doc } from 'prettier';
@@ -41,7 +41,9 @@ export default function MemoDetailScreen({ navigation, route }) {
 				<Text style={styles.MemoText}>{memo && memo.bodyText}</Text>
 			</ScrollView>
 			<CircleBotton
-				onPress={() => navigation.navigate('Edit')}
+				onPress={() =>
+					navigation.navigate('Edit', { id: memo.id, bodyText: memo.bodyText })
+				}
 				name='edit'
 				style={{ top: 60 }}
 			/>
@@ -52,7 +54,7 @@ export default function MemoDetailScreen({ navigation, route }) {
 MemoDetailScreen.prototype = {
 	route: shape({
 		params: shape({
-			id: String,
+			id: string,
 		}).isRequired,
 	}),
 };
